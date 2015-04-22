@@ -13,23 +13,28 @@ Task Model, which I architected and programmed, is a software simulation that te
 To facilitate production, I created a **Python** script that will iterate through an Excel spreadsheet containing content we received from the client, and convert the spreadsheet data directly to formatted JSON.
 
 I've included the following directories and content:
-*images used in this instance of the simulation*
-assets/ 
 
-*the JSON file for this instance of the simulation*		
-data/
+**assets/**
+- *images used in this instance of the simulation*
 
-_**Backbone** and **Marionette** model and view classes_
-js/
+**data/**
+- *the JSON file for this instance of the simulation*		
 
-*SASS styles that get converted to CSS*
+**js/**
+- _**Backbone** and **Marionette** model and view classes_
+
 scss/
 
-*processed .scss styles*
-css/
+*SASS styles that get converted to CSS*
 
-_html templates that get rendered at runtime via **Underscore**'s templating system_
-templates/
+**css/**
+
+- *processed .scss styles*
+
+**templates/**
+
+- _html templates that get rendered at runtime via **Underscore**'s templating system_
+
 
 Most of the relevant code is in the **js/** directory, but I've included the other directories for context, and to give you an idea of how the pieces fit together.
 
