@@ -8,7 +8,7 @@ I built the training as a Single Page Application that utilizes **Require**, **B
 
 This code constitutes only a small percentage of the entire training. For example, it doesn't include any of the proprietary application shell framework code, nor does it include the full range of interactions shipped with the courseware.  It includes only the pieces directly related to one interaction type -- a software simulation I'll refer to as Task Model. 
 
-Task Model, which I architected and programmed, is a software simulation that teaches users to use PG&E's Customer Relation Management (CRM) software. Users interact with the training through a variety of -**gestures**-: clicks, inputs, simulated conversations, and key presses. The simulation continuously provides users with feedback on selections and choices they make as they work through the training.
+Task Model, which I architected and programmed, is a software simulation that teaches users to use PG&E's Customer Relation Management (CRM) software. Users interact with the training through a variety of _**gestures**_: clicks, inputs, simulated conversations, and key presses. The simulation continuously provides users with feedback on selections and choices they make as they work through the training.
 
 To facilitate production, I created a **Python** script that will iterate through an Excel spreadsheet containing content we received from the client, and convert the spreadsheet data directly to formatted JSON.
 
