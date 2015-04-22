@@ -1,0 +1,19 @@
+/* In this file you should centralize your imports.
+
+   base.scss will handle application wide imports including:-
+      - Compass reset
+      - Compass CSS3
+      - Compass utilities
+      - Shell stylings */
+
+@import 'global/base';
+
+/* Place course specific interaction or other styling imports here. */
+
+@import 'interactions/clickreveal';
+@import 'interactions/fillinthebox';
+@import 'interactions/conversation';
+@import 'interactions/task';
+
+
+

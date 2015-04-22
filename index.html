@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PG&E Cashiering and Head Cashiering</title>
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+
+
+</head>
+<body>
+<div id="siteContainer">
+
+    <div id="navContainer"></div>
+
+    <div id="mainContentContainer"></div>
+
+    <div id="helpContainer"></div>
+
+    <div id="resourcesContainer"></div>
+
+    <div id="taskBuilderContainer"></div>
+
+    <div id="loadingPage"><h1>Please wait, initializing.....</h1></div>
+
+</div>
+
+<script language="javascript">
+
+    // convenience function, because console.log throws errors and crashes IE
+    // this way you don't need to all logs to test in IE
+    function trace(msg) {
+        try {
+            console.log(msg);
+        } catch(e) {
+            // suppressed error
+        }
+    }
+</script>
+<script src="js/lib/require.js" data-main="js/app.js"></script>
+</body>
+</html>

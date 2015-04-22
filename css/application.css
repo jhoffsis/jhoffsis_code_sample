@@ -1,0 +1,1841 @@
+@import url(//code.cdn.mozilla.net/fonts/fira.css?family=Fira+Sans:400,500,700,400italic,500italic);
+/* In this file you should centralize your imports.
+
+   base.scss will handle application wide imports including:-
+      - Compass reset
+      - Compass CSS3
+      - Compass utilities
+      - Shell stylings */
+/* line 17, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* -------------- loader3 -------------- */
+/* line 5, ../scss/global/_loader.scss */
+.loader3 {
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  top: 45%;
+  top: -webkit-calc(50% - 10px);
+  top: calc(50% - 10px);
+  left: 25%;
+  left: -webkit-calc(50% - 75px);
+  left: calc(50% - 75px); }
+
+/* line 18, ../scss/global/_loader.scss */
+.loader3:after {
+  content: "LOADING ...";
+  color: #fff;
+  font-family: "Helvetica Neue", "Helvetica";
+  font-weight: 200;
+  font-size: 16px;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  left: 0;
+  top: 0;
+  background-color: #1A8BBD;
+  z-index: 1; }
+
+/* line 34, ../scss/global/_loader.scss */
+.loader3:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: -5px;
+  left: 0px;
+  height: 30px;
+  width: 0px;
+  z-index: 0;
+  opacity: 1;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+  -webkit-animation: loader3 10s ease-in-out infinite;
+  animation: loader3 10s ease-in-out infinite; }
+
+@-webkit-keyframes loader3 {
+  /* line 51, ../scss/global/_loader.scss */
+  0% {
+    width: 0px; }
+
+  /* line 52, ../scss/global/_loader.scss */
+  70% {
+    width: 100%;
+    opacity: 1; }
+
+  /* line 53, ../scss/global/_loader.scss */
+  90% {
+    opacity: 0;
+    width: 100%; }
+
+  /* line 54, ../scss/global/_loader.scss */
+  100% {
+    opacity: 0;
+    width: 0px; } }
+
+@keyframes loader3 {
+  /* line 58, ../scss/global/_loader.scss */
+  0% {
+    width: 0px; }
+
+  /* line 59, ../scss/global/_loader.scss */
+  70% {
+    width: 100%;
+    opacity: 1; }
+
+  /* line 60, ../scss/global/_loader.scss */
+  90% {
+    opacity: 0;
+    width: 100%; }
+
+  /* line 61, ../scss/global/_loader.scss */
+  100% {
+    opacity: 0;
+    width: 0px; } }
+
+/* line 2, ../scss/global/_containers.scss */
+#siteContainer {
+  position: relative;
+  width: 988px;
+  min-height: 640px;
+  margin: 0px auto;
+  max-width: 1200px; }
+
+/* line 11, ../scss/global/_containers.scss */
+#mainContentContainer {
+  position: absolute;
+  width: 988px;
+  min-height: 640px; }
+
+/* line 15, ../scss/global/_containers.scss */
+#menuContainer {
+  position: absolute;
+  width: 988px;
+  min-height: 640px; }
+
+/* line 19, ../scss/global/_containers.scss */
+#navContainer {
+  position: absolute;
+  width: 988px;
+  min-height: 640px; }
+
+/* line 23, ../scss/global/_containers.scss */
+#helpContainer {
+  position: absolute;
+  width: 988px;
+  min-height: 640px;
+  display: none; }
+
+/* line 28, ../scss/global/_containers.scss */
+#resourcesContainer {
+  position: absolute;
+  width: 988px;
+  min-height: 640px;
+  display: none; }
+
+/* line 33, ../scss/global/_containers.scss */
+#taskBuilderContainer {
+  position: absolute;
+  width: 988px;
+  display: none; }
+
+/* line 41, ../scss/global/_containers.scss */
+#loadingPage {
+  position: relative;
+  line-height: 25;
+  height: 600px;
+  text-align: center; }
+
+/* line 4, ../scss/global/_text.scss */
+html {
+  font-size: 16px; }
+
+/* line 8, ../scss/global/_text.scss */
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  /* 1em = 10px */
+  color: #352a25; }
+
+/* line 15, ../scss/global/_text.scss */
+h1 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  margin: 10px 0px; }
+
+/* line 24, ../scss/global/_text.scss */
+h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2.2em;
+  font-weight: 500;
+  margin: 10px 0px; }
+
+/* line 32, ../scss/global/_text.scss */
+h3 {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.8em;
+  font-weight: 500;
+  margin: 10px 0px; }
+
+/* line 41, ../scss/global/_text.scss */
+p {
+  font-family: "Fira Sans", sans-serif;
+  line-height: 120%;
+  font-size: 1.6em;
+  margin: 5px 0px; }
+
+/* line 48, ../scss/global/_text.scss */
+b {
+  font-weight: 700; }
+
+/* line 52, ../scss/global/_text.scss */
+i {
+  font-weight: 400italic; }
+
+/* line 56, ../scss/global/_text.scss */
+ul {
+  font-family: "Fira Sans", sans-serif;
+  margin: 15px;
+  line-height: 120%;
+  font-size: 1.6em;
+  margin: 5px 0px; }
+
+/* line 65, ../scss/global/_text.scss */
+li {
+  list-style: disc outside;
+  font-size: inherit;
+  font-family: inherit;
+  margin: 10px;
+  margin-left: 20px;
+  line-height: 120%; }
+
+/* line 74, ../scss/global/_text.scss */
+a {
+  text-decoration: none; }
+
+/* line 77, ../scss/global/_text.scss */
+a:link {
+  color: dodgerblue; }
+
+/* unvisited link */
+/* line 78, ../scss/global/_text.scss */
+a:visited {
+  color: #00659b; }
+
+/* visited link */
+/* line 79, ../scss/global/_text.scss */
+a:hover {
+  color: #002335; }
+
+/* mouse over link */
+/* line 80, ../scss/global/_text.scss */
+a:active {
+  color: #00659b; }
+
+/* selected link */
+/* line 82, ../scss/global/_text.scss */
+header {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 140%;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px; }
+
+/* line 1, ../scss/global/_ui.scss */
+.standard-button {
+  width: 75px;
+  height: 10px;
+  background: url("../assets/image/ui/button-bg.png") no-repeat 0px 0px;
+  color: white;
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: center;
+  padding: 15px 20px 20px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px, 0px 0px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px, 0px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px, 0px 0px 0px;
+  cursor: pointer; }
+  /* line 77, ../scss/global/_mixins.scss */
+  .standard-button:hover {
+    background-position: 0px -45px; }
+  /* line 81, ../scss/global/_mixins.scss */
+  .standard-button:active {
+    background-position: 0px 0px; }
+  /* line 85, ../scss/global/_mixins.scss */
+  .standard-button.disabled {
+    background-position: 0px -90px;
+    cursor: default;
+    -moz-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, 0px 0px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, 0px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, 0px 0px 0px; }
+
+/* line 7, ../scss/global/_ui.scss */
+.scrim-background {
+  position: absolute;
+  width: 988px;
+  height: 640px; }
+
+/* line 11, ../scss/global/_ui.scss */
+.error-box {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  top: 200px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset; }
+  /* line 165, ../scss/global/_mixins.scss */
+  .error-box .content {
+    padding: 15px 20px; }
+  /* line 169, ../scss/global/_mixins.scss */
+  .error-box h2 {
+    color: black; }
+  /* line 173, ../scss/global/_mixins.scss */
+  .error-box p {
+    color: black;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+  /* line 178, ../scss/global/_mixins.scss */
+  .error-box ul, .error-box ol {
+    color: black;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+    /* line 182, ../scss/global/_mixins.scss */
+    .error-box ul li, .error-box ol li {
+      color: black; }
+  /* line 187, ../scss/global/_mixins.scss */
+  .error-box .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+
+/* line 15, ../scss/global/_ui.scss */
+.background-image {
+  position: absolute;
+  width: 988px;
+  height: 640px; }
+
+/* line 19, ../scss/global/_ui.scss */
+.coach-box {
+  position: absolute;
+  margin-left: -412px;
+  left: 50%;
+  top: 60px;
+  width: 825px;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.95);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F2ffffff', endColorstr='#F2ffffff');
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset; }
+  /* line 30, ../scss/global/_ui.scss */
+  .coach-box .coach-bg {
+    width: 825px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute; }
+  /* line 37, ../scss/global/_ui.scss */
+  .coach-box .instructor-box {
+    background: url("../assets/image/ui/coach-bg.png"); }
+  /* line 40, ../scss/global/_ui.scss */
+  .coach-box .coworker-box {
+    background: url("../assets/image/ui/coworker-bg.png"); }
+  /* line 45, ../scss/global/_ui.scss */
+  .coach-box .content {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    width: 475px;
+    height: 395px;
+    padding: 30px; }
+    /* line 52, ../scss/global/_ui.scss */
+    .coach-box .content p {
+      font-size: 1.6em;
+      line-height: 1.6em; }
+    /* line 57, ../scss/global/_ui.scss */
+    .coach-box .content h2 {
+      margin-bottom: 20px;
+      font-weight: 400; }
+  /* line 63, ../scss/global/_ui.scss */
+  .coach-box .standard-button {
+    position: absolute;
+    left: 420px;
+    top: 485px; }
+
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* line 1, ../scss/shell/_resources.scss */
+.definitions {
+  cursor: pointer;
+  /* mouse over link */ }
+  /* line 3, ../scss/shell/_resources.scss */
+  .definitions a {
+    text-decoration: underline;
+    color: #666666; }
+  /* line 8, ../scss/shell/_resources.scss */
+  .definitions a:hover {
+    color: #1a1a1a; }
+
+/* line 1, ../scss/shell/_menu.scss */
+#menu-logo {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  width: 61px;
+  height: 63px; }
+
+/* line 9, ../scss/shell/_menu.scss */
+#menu-courseTitle {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  font-size: 3.6em;
+  color: white;
+  margin: 0px;
+  padding: 0px; }
+
+/* line 19, ../scss/shell/_menu.scss */
+#menu-buttonsContainer {
+  position: absolute;
+  top: 110px;
+  left: 0px;
+  width: 288px;
+  border: 1px solid #333333;
+  -moz-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px; }
+  /* line 27, ../scss/shell/_menu.scss */
+  #menu-buttonsContainer #menu-title {
+    border-bottom: 1px solid #666666;
+    background: url("../assets/image/menu/menu-title-bg.jpg");
+    text-align: center;
+    padding: 24px 0px;
+    font-size: 2.5em; }
+
+/* line 37, ../scss/shell/_menu.scss */
+.menu-button {
+  height: 73px;
+  border-bottom: 1px solid #666666;
+  background: rgba(255, 255, 255, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80ffffff', endColorstr='#80ffffff');
+  width: 100%;
+  cursor: pointer; }
+  /* line 45, ../scss/shell/_menu.scss */
+  .menu-button p {
+    padding: 22px 0px 0px 20px;
+    font-size: 2.5em;
+    float: left; }
+  /* line 51, ../scss/shell/_menu.scss */
+  .menu-button:hover {
+    background: rgba(255, 255, 255, 0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B3ffffff', endColorstr='#B3ffffff'); }
+  /* line 56, ../scss/shell/_menu.scss */
+  .menu-button.selected {
+    background: rgba(255, 255, 255, 0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CCffffff', endColorstr='#CCffffff'); }
+  /* line 61, ../scss/shell/_menu.scss */
+  .menu-button .status {
+    background: url("../assets/image/menu/menu-button-status.png");
+    width: 44px;
+    height: 73px;
+    float: left; }
+  /* line 68, ../scss/shell/_menu.scss */
+  .menu-button .status.not-started {
+    background-position: 0px 0px; }
+  /* line 72, ../scss/shell/_menu.scss */
+  .menu-button .status.started {
+    background-position: 0px -74px; }
+  /* line 76, ../scss/shell/_menu.scss */
+  .menu-button .status.completed {
+    background-position: 0px -148px; }
+  /* line 80, ../scss/shell/_menu.scss */
+  .menu-button:last-of-type {
+    border-bottom: none; }
+
+/* line 86, ../scss/shell/_menu.scss */
+#submenu-buttonsContainer {
+  position: absolute;
+  width: 350px;
+  border: 1px solid #333333;
+  -moz-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px; }
+
+/* line 93, ../scss/shell/_menu.scss */
+#submenu-mask {
+  position: absolute;
+  left: 289px;
+  top: 184px;
+  width: 352px;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 102, ../scss/shell/_menu.scss */
+.submenu-button {
+  height: 36px;
+  border-bottom: 1px solid #666666;
+  background: rgba(255, 255, 255, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80ffffff', endColorstr='#80ffffff');
+  width: 100%;
+  cursor: pointer;
+  display: table;
+  text-align: left;
+  margin-left: 22px; }
+  /* line 114, ../scss/shell/_menu.scss */
+  .submenu-button p {
+    padding-left: 10px;
+    font-size: 1.6em;
+    display: table-cell;
+    vertical-align: middle; }
+  /* line 122, ../scss/shell/_menu.scss */
+  .submenu-button:hover {
+    background: rgba(255, 255, 255, 0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#B3ffffff', endColorstr='#B3ffffff'); }
+  /* line 127, ../scss/shell/_menu.scss */
+  .submenu-button.selected {
+    background: rgba(255, 255, 255, 0.8);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CCffffff', endColorstr='#CCffffff'); }
+  /* line 132, ../scss/shell/_menu.scss */
+  .submenu-button .status {
+    position: relative;
+    margin-left: -22px;
+    background: url("../assets/image/menu/submenu-button-status.png");
+    width: 22px;
+    height: 36px; }
+  /* line 141, ../scss/shell/_menu.scss */
+  .submenu-button .status.not-started {
+    background-position: 0px 0px; }
+  /* line 145, ../scss/shell/_menu.scss */
+  .submenu-button .status.started {
+    background-position: 0px -50px; }
+  /* line 149, ../scss/shell/_menu.scss */
+  .submenu-button .status.completed {
+    background-position: 0px -100px; }
+  /* line 153, ../scss/shell/_menu.scss */
+  .submenu-button:last-of-type {
+    border-bottom: none; }
+
+/* line 159, ../scss/shell/_menu.scss */
+#menu-descriptionBox {
+  position: absolute;
+  right: 15px;
+  top: 110px;
+  width: 230px;
+  min-height: 350px;
+  padding: 30px 20px 20px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CCffffff', endColorstr='#CCffffff');
+  -moz-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px; }
+  /* line 169, ../scss/shell/_menu.scss */
+  #menu-descriptionBox .header-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 270px;
+    height: auto; }
+
+/* line 187, ../scss/shell/_menu.scss */
+#menu-key {
+  position: absolute;
+  left: 0px;
+  bottom: 8px;
+  height: 42px;
+  width: 375px;
+  background: url("../assets/image/menu/menu-key-bg.png") no-repeat;
+  border: 1px solid #333333; }
+  /* line 197, ../scss/shell/_menu.scss */
+  #menu-key .key-status {
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px; }
+    /* line 201, ../scss/shell/_menu.scss */
+    #menu-key .key-status .status-icon {
+      float: left;
+      width: 18px;
+      height: 24px;
+      background: url("../assets/image/menu/menu-key-status.png") no-repeat 0px 0px; }
+    /* line 207, ../scss/shell/_menu.scss */
+    #menu-key .key-status p {
+      float: left;
+      margin: 2px 5px 0px; }
+  /* line 214, ../scss/shell/_menu.scss */
+  #menu-key .key-status:nth-child(1) .status-icon {
+    background-position: 0px -24px; }
+  /* line 220, ../scss/shell/_menu.scss */
+  #menu-key .key-status:nth-child(2) .status-icon {
+    background-position: 0px -48px; }
+
+/* line 1, ../scss/shell/_nav.scss */
+#nav-header {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  z-index: 1;
+  background-color: #0066cc;
+  -moz-box-shadow: 0px 2px 11px 0px rgba(50, 50, 50, 0.75), 0px 0px 0px;
+  -webkit-box-shadow: 0px 2px 11px 0px rgba(50, 50, 50, 0.75), 0px 0px 0px;
+  box-shadow: 0px 2px 11px 0px rgba(50, 50, 50, 0.75), 0px 0px 0px; }
+  /* line 9, ../scss/shell/_nav.scss */
+  #nav-header #nav-resources-button {
+    float: right; }
+  /* line 13, ../scss/shell/_nav.scss */
+  #nav-header #nav-menu-button {
+    float: left; }
+
+/* line 19, ../scss/shell/_nav.scss */
+.nav-rule {
+  background: #0066cc;
+  position: absolute;
+  z-index: 1;
+  border-style: none; }
+
+/* line 26, ../scss/shell/_nav.scss */
+#left-rule {
+  left: 0px;
+  top: 40px;
+  height: 600px;
+  width: 3px; }
+
+/* line 33, ../scss/shell/_nav.scss */
+#right-rule {
+  right: 0px;
+  top: 40px;
+  height: 600px;
+  width: 3px; }
+
+/* line 40, ../scss/shell/_nav.scss */
+#bottom-rule {
+  bottom: -6px;
+  width: 988px;
+  height: 3px; }
+
+/* line 46, ../scss/shell/_nav.scss */
+.nav-button {
+  color: white;
+  margin: 13px;
+  font-size: 1.8em;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer; }
+
+/* line 55, ../scss/shell/_nav.scss */
+#nav-footer {
+  position: absolute;
+  height: 40px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+  display: none; }
+
+/* line 1, ../scss/shell/_jira.scss */
+#customJiraTrigger {
+  position: absolute;
+  right: -30px;
+  top: 275px;
+  padding: 6px 10px 8px 10px;
+  height: 14px;
+  background: #555555;
+  color: white;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px -1px 12px 0px, 0px 0px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px -1px 12px 0px, 0px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px -1px 12px 0px, 0px 0px 0px;
+  border-left: 2px white solid;
+  border-top: 2px white solid;
+  border-right: 2px white solid;
+  cursor: pointer; }
+  /* line 23, ../scss/shell/_jira.scss */
+  #customJiraTrigger:hover {
+    background: #444444; }
+
+/* line 35, ../scss/shell/_jira.scss */
+#customJiraTrigger:after {
+  content: "Feedback"; }
+
+/* line 1, ../scss/shell/_pageturner.scss */
+.pagturner-box-left {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  top: 200px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  top: 200px;
+  margin: 0px;
+  left: 20px;
+  padding: 20px; }
+  /* line 165, ../scss/global/_mixins.scss */
+  .pagturner-box-left .content {
+    padding: 15px 20px; }
+  /* line 169, ../scss/global/_mixins.scss */
+  .pagturner-box-left h2 {
+    color: black; }
+  /* line 173, ../scss/global/_mixins.scss */
+  .pagturner-box-left p {
+    color: black;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+  /* line 178, ../scss/global/_mixins.scss */
+  .pagturner-box-left ul, .pagturner-box-left ol {
+    color: black;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+    /* line 182, ../scss/global/_mixins.scss */
+    .pagturner-box-left ul li, .pagturner-box-left ol li {
+      color: black; }
+  /* line 187, ../scss/global/_mixins.scss */
+  .pagturner-box-left .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+
+/* line 8, ../scss/shell/_pageturner.scss */
+.pagturner-box-right {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  top: 200px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  top: 200px;
+  margin: 0px;
+  right: 20px;
+  padding: 20px; }
+  /* line 165, ../scss/global/_mixins.scss */
+  .pagturner-box-right .content {
+    padding: 15px 20px; }
+  /* line 169, ../scss/global/_mixins.scss */
+  .pagturner-box-right h2 {
+    color: black; }
+  /* line 173, ../scss/global/_mixins.scss */
+  .pagturner-box-right p {
+    color: black;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+  /* line 178, ../scss/global/_mixins.scss */
+  .pagturner-box-right ul, .pagturner-box-right ol {
+    color: black;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+    /* line 182, ../scss/global/_mixins.scss */
+    .pagturner-box-right ul li, .pagturner-box-right ol li {
+      color: black; }
+  /* line 187, ../scss/global/_mixins.scss */
+  .pagturner-box-right .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+
+/* line 15, ../scss/shell/_pageturner.scss */
+.pagturner-img-left {
+  margin: 0px;
+  left: 20px; }
+
+/* line 19, ../scss/shell/_pageturner.scss */
+.pagturner-img-right {
+  margin: 0px;
+  right: 20px; }
+
+/* line 1, ../scss/taskbuilder/_taskbuilder.scss */
+#tbLoadingBox {
+  position: absolute;
+  top: 80px;
+  left: 150px;
+  width: 600px;
+  border: 1px solid #666666;
+  padding: 10px;
+  background: #dcdcdc;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset; }
+  /* line 9, ../scss/taskbuilder/_taskbuilder.scss */
+  #tbLoadingBox #tbLoadPath {
+    padding: 1px 5px 1px 5px;
+    background: #ffffff;
+    margin-bottom: 20px; }
+    /* line 10, ../scss/taskbuilder/_taskbuilder.scss */
+    #tbLoadingBox #tbLoadPath p {
+      font-family: Helvetica;
+      font-size: 13px; }
+  /* line 18, ../scss/taskbuilder/_taskbuilder.scss */
+  #tbLoadingBox #tbLoadCurrentButton {
+    float: right; }
+  /* line 21, ../scss/taskbuilder/_taskbuilder.scss */
+  #tbLoadingBox #tbLoadNewButton {
+    float: right; }
+
+/* line 29, ../scss/taskbuilder/_taskbuilder.scss */
+#tbPanelContainer {
+  position: absolute;
+  top: 645px;
+  left: 0px;
+  border: 1px solid #666666;
+  padding: 5px;
+  background: rgba(220, 220, 220, 0.6);
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  z-index: 50; }
+
+/* line 41, ../scss/taskbuilder/_taskbuilder.scss */
+#tbPanelButtons {
+  display: block;
+  float: left; }
+
+/* line 45, ../scss/taskbuilder/_taskbuilder.scss */
+.tbPanelButton {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px;
+  margin-right: 10px; }
+  /* line 50, ../scss/taskbuilder/_taskbuilder.scss */
+  .tbPanelButton:disabled {
+    cursor: default;
+    background: #666666; }
+
+/* line 57, ../scss/taskbuilder/_taskbuilder.scss */
+#tbImageButton.selected {
+  background-color: #ff0000; }
+
+/* line 63, ../scss/taskbuilder/_taskbuilder.scss */
+#tbHotspotButton.selected {
+  background: #00ffff; }
+
+/* line 69, ../scss/taskbuilder/_taskbuilder.scss */
+#tbHintButton.selected {
+  background: #00ff00; }
+
+/* line 75, ../scss/taskbuilder/_taskbuilder.scss */
+.tbOverlay {
+  cursor: move;
+  position: absolute;
+  opacity: 0.5;
+  background-color: #ff0000;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 81, ../scss/taskbuilder/_taskbuilder.scss */
+  .tbOverlay.selected {
+    border: 4px dashed gold; }
+
+/* line 85, ../scss/taskbuilder/_taskbuilder.scss */
+.tbHotspot {
+  cursor: move;
+  position: absolute;
+  opacity: 0.5;
+  background-color: #00ffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 91, ../scss/taskbuilder/_taskbuilder.scss */
+  .tbHotspot.selected {
+    border: 4px dashed gold; }
+
+/* line 95, ../scss/taskbuilder/_taskbuilder.scss */
+.tbInput {
+  cursor: move;
+  position: absolute;
+  opacity: 0.5;
+  background-color: #00ffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 101, ../scss/taskbuilder/_taskbuilder.scss */
+  .tbInput.selected {
+    border: 4px dashed gold; }
+
+/* line 105, ../scss/taskbuilder/_taskbuilder.scss */
+#tbGestureContainer {
+  position: absolute;
+  top: 40px; }
+
+/* line 110, ../scss/taskbuilder/_taskbuilder.scss */
+#tbOverlayContainer {
+  position: absolute;
+  top: 40px; }
+
+/* line 115, ../scss/taskbuilder/_taskbuilder.scss */
+.tbOverlayImg {
+  opacity: 0; }
+
+/* line 119, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable {
+  position: relative; }
+
+/* line 120, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block; }
+
+/* line 121, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle {
+  display: none; }
+
+/* line 122, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-n {
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0; }
+
+/* line 123, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0; }
+
+/* line 124, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%; }
+
+/* line 125, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0;
+  height: 100%; }
+
+/* line 126, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px; }
+
+/* line 127, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px; }
+
+/* line 128, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px; }
+
+/* line 129, ../scss/taskbuilder/_taskbuilder.scss */
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px; }
+
+/* Place course specific interaction or other styling imports here. */
+/* line 1, ../scss/interactions/_clickreveal.scss */
+#cr-hotspotContainer {
+  position: absolute;
+  width: 988px;
+  height: 640px; }
+
+/* line 5, ../scss/interactions/_clickreveal.scss */
+#cr-hotspots {
+  position: absolute;
+  width: 988px;
+  height: 640px; }
+
+/* line 9, ../scss/interactions/_clickreveal.scss */
+.lt-ie9 .hotspot {
+  border: 4px solid lightblue; }
+
+/* line 13, ../scss/interactions/_clickreveal.scss */
+.hotspot {
+  position: absolute;
+  border: 4px solid rgba(255, 255, 255, 0.4);
+  width: auto;
+  height: auto;
+  cursor: pointer; }
+  /* line 18, ../scss/interactions/_clickreveal.scss */
+  .hotspot:hover {
+    border: 4px solid #45abc4; }
+
+/* line 27, ../scss/interactions/_clickreveal.scss */
+#cr-rolloverBox {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  width: 350px;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 120%;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, 0px 0px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, 0px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, 0px 0px 0px;
+  z-index: 150; }
+  /* line 206, ../scss/global/_mixins.scss */
+  #cr-rolloverBox .content {
+    padding: 15px; }
+  /* line 210, ../scss/global/_mixins.scss */
+  #cr-rolloverBox h2 {
+    color: #444444;
+    line-height: 1em; }
+  /* line 215, ../scss/global/_mixins.scss */
+  #cr-rolloverBox p {
+    color: #444444; }
+  /* line 219, ../scss/global/_mixins.scss */
+  #cr-rolloverBox .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+  /* line 30, ../scss/interactions/_clickreveal.scss */
+  #cr-rolloverBox.left-sided #arrow-bottom {
+    position: absolute;
+    bottom: -20px;
+    left: 50px; }
+  /* line 35, ../scss/interactions/_clickreveal.scss */
+  #cr-rolloverBox.left-sided #arrow-top {
+    position: absolute;
+    top: -20px;
+    left: 50px; }
+  /* line 41, ../scss/interactions/_clickreveal.scss */
+  #cr-rolloverBox.right-sided #arrow-bottom {
+    position: absolute;
+    bottom: -20px;
+    right: 50px; }
+  /* line 46, ../scss/interactions/_clickreveal.scss */
+  #cr-rolloverBox.right-sided #arrow-top {
+    position: absolute;
+    top: -20px;
+    right: 50px; }
+
+/* line 53, ../scss/interactions/_clickreveal.scss */
+#cr-continueButton {
+  position: absolute;
+  right: 20px;
+  bottom: 50px; }
+
+/* line 1, ../scss/interactions/_fillinthebox.scss */
+#fitbTill {
+  position: absolute;
+  top: 124px;
+  left: 33px; }
+
+/* line 6, ../scss/interactions/_fillinthebox.scss */
+#fitbCountBox {
+  position: absolute;
+  top: 57px;
+  left: 19px;
+  width: 700px;
+  height: 100px; }
+  /* line 13, ../scss/interactions/_fillinthebox.scss */
+  #fitbCountBox #fitbCountHeader {
+    display: inline-block;
+    color: #ffffff;
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 1px; }
+  /* line 18, ../scss/interactions/_fillinthebox.scss */
+  #fitbCountBox .fitbCount {
+    display: inline-block;
+    background: url("../assets/image/fitb/count_label_bg.png") top left no-repeat;
+    width: 79px;
+    height: 68px;
+    margin-left: 27px;
+    text-align: center; }
+    /* line 25, ../scss/interactions/_fillinthebox.scss */
+    #fitbCountBox .fitbCount h1 {
+      color: #ffffff;
+      margin-right: 7px; }
+
+/* line 31, ../scss/interactions/_fillinthebox.scss */
+#fitbReceiptBox {
+  position: absolute;
+  top: 365px;
+  left: 75px;
+  width: 170px;
+  height: 274px;
+  padding: 30px 15px 15px 15px;
+  text-align: right;
+  background: url("../assets/image/fitb/receipt_bg.png") top left no-repeat; }
+  /* line 40, ../scss/interactions/_fillinthebox.scss */
+  #fitbReceiptBox p {
+    width: 120px;
+    color: #999999;
+    font-size: 15px; }
+
+/* line 49, ../scss/interactions/_fillinthebox.scss */
+#fitbCashTagTurnBox {
+  position: absolute;
+  top: 300px;
+  left: 270px;
+  width: 375px;
+  height: 349px;
+  background: url("../assets/image/fitb/cash_turn_tag.jpg") top left no-repeat;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset; }
+  /* line 58, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox p {
+    font-size: 16px;
+    line-height: 87%; }
+  /* line 63, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox .fitbRight {
+    float: right; }
+  /* line 66, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox #fitbCashTagNumbers {
+    position: absolute;
+    top: 100px;
+    left: 130px;
+    width: 125px; }
+  /* line 72, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox #fitbCashTagTotal {
+    position: absolute;
+    top: 233px;
+    left: 230px; }
+  /* line 77, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox .fitbInputHolder {
+    background: #ffffff;
+    border: #0095d7 2px solid; }
+    /* line 80, ../scss/interactions/_fillinthebox.scss */
+    #fitbCashTagTurnBox .fitbInputHolder.incorrect {
+      border: red 2px solid; }
+  /* line 84, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox input {
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    text-align: right;
+    display: block;
+    width: inherit;
+    height: inherit;
+    font-family: "Fira Sans", sans-serif, Helvetica, sans-serif;
+    line-height: 100%;
+    font-size: 14px;
+    color: #000000;
+    margin: 0px;
+    padding: 0px; }
+    /* line 98, ../scss/interactions/_fillinthebox.scss */
+    #fitbCashTagTurnBox input :disabled {
+      color: #000000; }
+    /* line 101, ../scss/interactions/_fillinthebox.scss */
+    #fitbCashTagTurnBox input::-ms-clear {
+      display: none; }
+  /* line 107, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    text-transform: none; }
+  /* line 110, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    text-transform: none; }
+  /* line 113, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    text-transform: none; }
+  /* line 116, ../scss/interactions/_fillinthebox.scss */
+  #fitbCashTagTurnBox :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    text-transform: none; }
+
+/* line 120, ../scss/interactions/_fillinthebox.scss */
+input::-ms-clear {
+  display: none; }
+
+/* line 123, ../scss/interactions/_fillinthebox.scss */
+#fitbRightPanel {
+  position: absolute;
+  right: 15px;
+  top: 120px;
+  left: 665px;
+  height: 494px;
+  width: 305px;
+  min-height: 350px;
+  padding: 0px;
+  background: url("../assets/image/menu/description-header.png") no-repeat rgba(255, 255, 255, 0.9);
+  background-size: 305px 30px;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CCffffff', endColorstr='#CCffffff');
+  -moz-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px;
+  box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.5), 0px 0px 0px; }
+  /* line 140, ../scss/interactions/_fillinthebox.scss */
+  #fitbRightPanel .content {
+    padding: 50px 30px 30px 30px; }
+    /* line 141, ../scss/interactions/_fillinthebox.scss */
+    #fitbRightPanel .content p {
+      color: #333333;
+      font-size: 1.5em; }
+  /* line 147, ../scss/interactions/_fillinthebox.scss */
+  #fitbRightPanel .standard-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px; }
+
+/* line 153, ../scss/interactions/_fillinthebox.scss */
+#fitbFeedbackBox {
+  position: absolute;
+  bottom: 28px;
+  left: 665px;
+  width: 305px;
+  min-height: 150px;
+  max-height: 550px;
+  background-color: #ef9216; }
+  /* line 162, ../scss/interactions/_fillinthebox.scss */
+  #fitbFeedbackBox .content {
+    padding: 30px 30px 70px 30px; }
+  /* line 165, ../scss/interactions/_fillinthebox.scss */
+  #fitbFeedbackBox h2 {
+    color: #ffffff; }
+  /* line 168, ../scss/interactions/_fillinthebox.scss */
+  #fitbFeedbackBox p {
+    color: #ffffff;
+    font-size: 1.5em; }
+  /* line 172, ../scss/interactions/_fillinthebox.scss */
+  #fitbFeedbackBox .standard-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px; }
+
+/* line 178, ../scss/interactions/_fillinthebox.scss */
+#fitbScrim {
+  position: absolute;
+  width: 988px;
+  height: 640px;
+  background: #000000; }
+
+/* line 1, ../scss/interactions/_conversation.scss */
+#cnv-questionContainer {
+  position: absolute;
+  width: 300px;
+  top: 85px;
+  background-color: rgba(255, 255, 255, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CCffffff', endColorstr='#CCffffff');
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset; }
+  /* line 8, ../scss/interactions/_conversation.scss */
+  #cnv-questionContainer .header-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: auto; }
+  /* line 18, ../scss/interactions/_conversation.scss */
+  #cnv-questionContainer #cnv-questionTitle {
+    font-size: 1.8em;
+    font-weight: 500;
+    margin: 50px 0px 20px;
+    text-align: center; }
+
+/* line 27, ../scss/interactions/_conversation.scss */
+.cnv-choice {
+  position: relative;
+  width: 265px;
+  color: #333333;
+  font-size: 1.25em;
+  font-weight: 400;
+  overflow: hidden;
+  background: url("../assets/image/ui/choice-button-bg.jpg") no-repeat 0px 0px;
+  cursor: pointer;
+  margin-left: 17px;
+  overflow: hidden; }
+  /* line 128, ../scss/global/_mixins.scss */
+  .cnv-choice p {
+    font-size: 1.25em; }
+  /* line 132, ../scss/global/_mixins.scss */
+  .cnv-choice:hover {
+    cursor: default; }
+  /* line 138, ../scss/global/_mixins.scss */
+  .cnv-choice.selected {
+    color: white;
+    background-position: 0px -200px;
+    cursor: default; }
+  /* line 144, ../scss/global/_mixins.scss */
+  .cnv-choice.disabled {
+    color: lightblue;
+    background-position: 0px -200px;
+    cursor: default; }
+  /* line 31, ../scss/interactions/_conversation.scss */
+  .cnv-choice p {
+    margin: 12px; }
+  /* line 34, ../scss/interactions/_conversation.scss */
+  .cnv-choice:hover p {
+    font-color: black; }
+  /* line 37, ../scss/interactions/_conversation.scss */
+  .cnv-choice .cnv-choice-body {
+    margin: 15px; }
+  /* line 41, ../scss/interactions/_conversation.scss */
+  .cnv-choice.enabled {
+    cursor: pointer; }
+  /* line 45, ../scss/interactions/_conversation.scss */
+  .cnv-choice .cnv-choice-hover {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    display: none; }
+  /* line 52, ../scss/interactions/_conversation.scss */
+  .cnv-choice.enabled:hover .cnv-choice-hover {
+    display: block; }
+  /* line 55, ../scss/interactions/_conversation.scss */
+  .cnv-choice.selected:hover .cnv-choice-hover {
+    display: block; }
+
+/* line 60, ../scss/interactions/_conversation.scss */
+.cnv-spacer {
+  height: 15px; }
+
+/* line 64, ../scss/interactions/_conversation.scss */
+#cnv-qContainer {
+  position: absolute;
+  width: 988px;
+  height: 640px;
+  overflow: hidden; }
+
+/* line 69, ../scss/interactions/_conversation.scss */
+#cnv-coachBox {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  top: 200px;
+  left: 50%;
+  margin-left: -250px;
+  width: 500px;
+  background-color: #fca72f;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  margin-left: 0px;
+  left: 100px;
+  top: 300px; }
+  /* line 165, ../scss/global/_mixins.scss */
+  #cnv-coachBox .content {
+    padding: 15px 20px; }
+  /* line 169, ../scss/global/_mixins.scss */
+  #cnv-coachBox h2 {
+    color: white; }
+  /* line 173, ../scss/global/_mixins.scss */
+  #cnv-coachBox p {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+  /* line 178, ../scss/global/_mixins.scss */
+  #cnv-coachBox ul, #cnv-coachBox ol {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+    /* line 182, ../scss/global/_mixins.scss */
+    #cnv-coachBox ul li, #cnv-coachBox ol li {
+      color: white; }
+  /* line 187, ../scss/global/_mixins.scss */
+  #cnv-coachBox .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+
+/* line 76, ../scss/interactions/_conversation.scss */
+#cnv-saysBox {
+  position: absolute;
+  width: 350px;
+  min-height: 170px;
+  left: 100px;
+  top: 80px;
+  background: #48bbed;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48bbed), color-stop(100%, #007dbb));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #48bbed 0%, #007dbb 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#48bbed', endColorstr='#007dbb',GradientType=0 );
+  /* IE6-9 */
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px; }
+  /* line 87, ../scss/interactions/_conversation.scss */
+  #cnv-saysBox .content {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    color: white;
+    padding: 20px;
+    /* unvisited link */
+    /* visited link */ }
+    /* line 92, ../scss/interactions/_conversation.scss */
+    #cnv-saysBox .content p {
+      font-size: inherit; }
+    /* line 95, ../scss/interactions/_conversation.scss */
+    #cnv-saysBox .content a:link {
+      color: white; }
+    /* line 96, ../scss/interactions/_conversation.scss */
+    #cnv-saysBox .content a:visited {
+      color: white; }
+  /* line 99, ../scss/interactions/_conversation.scss */
+  #cnv-saysBox .pointer {
+    position: absolute;
+    background: url("../assets/image/ui/says-pointer.png") no-repeat;
+    right: -42px;
+    bottom: 20px;
+    width: 42px;
+    height: 55px; }
+
+/* Main View */
+/* line 3, ../scss/interactions/_task.scss */
+#task-mainview {
+  position: absolute;
+  width: 988px;
+  height: 640px; }
+
+/* line 6, ../scss/interactions/_task.scss */
+#task-screenview {
+  position: absolute;
+  top: 40px;
+  width: 988px;
+  height: 600px;
+  overflow-y: auto; }
+
+/* line 14, ../scss/interactions/_task.scss */
+#task-questionview {
+  position: absolute;
+  top: 40px;
+  overflow: hidden; }
+
+/* line 20, ../scss/interactions/_task.scss */
+#task-startButton {
+  position: absolute;
+  right: 250px;
+  bottom: 40px; }
+
+/* line 26, ../scss/interactions/_task.scss */
+#task-feedbackBox {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  top: 200px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  background-color: #fca72f;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset; }
+  /* line 165, ../scss/global/_mixins.scss */
+  #task-feedbackBox .content {
+    padding: 15px 20px; }
+  /* line 169, ../scss/global/_mixins.scss */
+  #task-feedbackBox h2 {
+    color: white; }
+  /* line 173, ../scss/global/_mixins.scss */
+  #task-feedbackBox p {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+  /* line 178, ../scss/global/_mixins.scss */
+  #task-feedbackBox ul, #task-feedbackBox ol {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+    /* line 182, ../scss/global/_mixins.scss */
+    #task-feedbackBox ul li, #task-feedbackBox ol li {
+      color: white; }
+  /* line 187, ../scss/global/_mixins.scss */
+  #task-feedbackBox .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+
+/* Screen View */
+/* line 32, ../scss/interactions/_task.scss */
+#task-bgHolder {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 640px;
+  width: 100%;
+  overflow: hidden; }
+
+/* line 40, ../scss/interactions/_task.scss */
+#task-bgContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+/* line 46, ../scss/interactions/_task.scss */
+.task-element {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 988px; }
+
+/* line 54, ../scss/interactions/_task.scss */
+#task-overlayContainer .task-overlay-img {
+  position: absolute; }
+
+/* line 60, ../scss/interactions/_task.scss */
+.transparent-bg {
+  width: 100%;
+  height: 100%; }
+
+/* line 66, ../scss/interactions/_task.scss */
+#task-hintContainer .task-hint {
+  position: absolute;
+  margin-left: -3px;
+  margin-top: -3px;
+  border: 3px solid #48bbed; }
+
+/* line 75, ../scss/interactions/_task.scss */
+#task-hintCallout {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  width: 150px;
+  background-color: #007dbb;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 120%;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, 0px 0px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, 0px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, 0px 0px 0px;
+  background: #48bbed;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48bbed), color-stop(100%, #007dbb));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #48bbed 0%, #007dbb 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #48bbed 0%, #007dbb 100%);
+  /* W3C */
+  z-index: 150; }
+  /* line 206, ../scss/global/_mixins.scss */
+  #task-hintCallout .content {
+    padding: 15px; }
+  /* line 210, ../scss/global/_mixins.scss */
+  #task-hintCallout h2 {
+    color: white;
+    line-height: 1em; }
+  /* line 215, ../scss/global/_mixins.scss */
+  #task-hintCallout p {
+    color: white; }
+  /* line 219, ../scss/global/_mixins.scss */
+  #task-hintCallout .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+  /* line 79, ../scss/interactions/_task.scss */
+  #task-hintCallout.left-sided #arrow-bottom {
+    position: absolute;
+    bottom: -20px;
+    left: 10px; }
+  /* line 84, ../scss/interactions/_task.scss */
+  #task-hintCallout.left-sided #arrow-top {
+    position: absolute;
+    top: -20px;
+    left: 10px; }
+  /* line 90, ../scss/interactions/_task.scss */
+  #task-hintCallout.right-sided #arrow-bottom {
+    position: absolute;
+    bottom: -20px;
+    right: 10px; }
+  /* line 95, ../scss/interactions/_task.scss */
+  #task-hintCallout.right-sided #arrow-top {
+    position: absolute;
+    top: -20px;
+    right: 10px; }
+
+/* line 102, ../scss/interactions/_task.scss */
+#task-border {
+  position: absolute;
+  width: 982px;
+  height: 634px;
+  border: 3px solid #0066cc; }
+
+/* line 109, ../scss/interactions/_task.scss */
+#task-screenClick {
+  position: absolute;
+  width: 988px;
+  height: 640px; }
+
+/* line 115, ../scss/interactions/_task.scss */
+#task-gestureContainer .task-gestureHotspot {
+  position: absolute; }
+/* line 119, ../scss/interactions/_task.scss */
+#task-gestureContainer .task-gestureInput {
+  position: absolute; }
+/* line 122, ../scss/interactions/_task.scss */
+#task-gestureContainer input {
+  text-align: right; }
+
+/* line 128, ../scss/interactions/_task.scss */
+.task-screenInstructions {
+  display: none; }
+
+/* line 131, ../scss/interactions/_task.scss */
+#task-screenInstructions {
+  position: absolute;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  top: 200px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  background-color: #fca72f;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 8px, rgba(255, 255, 255, 0.5) 1px 1px 1px inset;
+  top: auto;
+  bottom: 70px;
+  cursor: move;
+  position: absolute; }
+  /* line 165, ../scss/global/_mixins.scss */
+  #task-screenInstructions .content {
+    padding: 15px 20px; }
+  /* line 169, ../scss/global/_mixins.scss */
+  #task-screenInstructions h2 {
+    color: white; }
+  /* line 173, ../scss/global/_mixins.scss */
+  #task-screenInstructions p {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+  /* line 178, ../scss/global/_mixins.scss */
+  #task-screenInstructions ul, #task-screenInstructions ol {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.6em; }
+    /* line 182, ../scss/global/_mixins.scss */
+    #task-screenInstructions ul li, #task-screenInstructions ol li {
+      color: white; }
+  /* line 187, ../scss/global/_mixins.scss */
+  #task-screenInstructions .standard-button {
+    position: relative;
+    float: right;
+    margin: 0px 15px 15px 0px; }
+  /* line 137, ../scss/interactions/_task.scss */
+  #task-screenInstructions.topleft {
+    bottom: auto;
+    top: 50px;
+    left: 50px;
+    right: auto;
+    margin-left: auto; }
+  /* line 144, ../scss/interactions/_task.scss */
+  #task-screenInstructions.topcenter {
+    bottom: auto;
+    top: 50px;
+    left: 50%;
+    margin-left: -150px;
+    right: auto; }
+  /* line 151, ../scss/interactions/_task.scss */
+  #task-screenInstructions.topright {
+    bottom: auto;
+    top: 50px;
+    left: auto;
+    margin-left: auto;
+    right: 50px; }
+  /* line 158, ../scss/interactions/_task.scss */
+  #task-screenInstructions.bottomleft {
+    bottom: 50px;
+    top: auto;
+    left: 50px;
+    right: auto;
+    margin-left: auto; }
+  /* line 165, ../scss/interactions/_task.scss */
+  #task-screenInstructions.bottomcenter {
+    bottom: 50px;
+    top: auto;
+    left: 50%;
+    margin-left: -150px;
+    right: auto; }
+  /* line 172, ../scss/interactions/_task.scss */
+  #task-screenInstructions.bottomright {
+    bottom: 50px;
+    top: auto;
+    left: auto;
+    margin-left: auto;
+    right: 50px; }
+  /* line 179, ../scss/interactions/_task.scss */
+  #task-screenInstructions.middleleft {
+    bottom: 175px;
+    top: auto;
+    left: 50px;
+    right: auto;
+    margin-left: auto; }
+  /* line 186, ../scss/interactions/_task.scss */
+  #task-screenInstructions.middlecenter {
+    bottom: 175px;
+    top: auto;
+    left: 50%;
+    margin-left: -150px;
+    right: auto; }
+  /* line 193, ../scss/interactions/_task.scss */
+  #task-screenInstructions.middleright {
+    bottom: 175px;
+    top: auto;
+    left: auto;
+    margin-left: auto;
+    right: 50px; }
+
+/* line 203, ../scss/interactions/_task.scss */
+#task-cueContainer #task-postit {
+  background: url("../assets/image/ui/postit-note.png") no-repeat;
+  width: 200px;
+  height: 210px;
+  position: fixed;
+  left: 25px;
+  top: 400px;
+  z-index: 1; }
+  /* line 212, ../scss/interactions/_task.scss */
+  #task-cueContainer #task-postit .postit-handle {
+    width: 200px;
+    height: 50px;
+    cursor: move; }
+  /* line 217, ../scss/interactions/_task.scss */
+  #task-cueContainer #task-postit .content {
+    padding: 0px 15px 20px 15px;
+    text-align: center; }
+  /* line 222, ../scss/interactions/_task.scss */
+  #task-cueContainer #task-postit p, #task-cueContainer #task-postit h2 {
+    color: #0066cc; }
+  /* line 226, ../scss/interactions/_task.scss */
+  #task-cueContainer #task-postit.textarea h2 {
+    font-size: 1.7em; }
+/* line 231, ../scss/interactions/_task.scss */
+#task-cueContainer #task-cue-img {
+  left: 25px;
+  width: auto;
+  height: auto;
+  position: fixed;
+  left: 25px;
+  top: 400px;
+  z-index: 1;
+  cursor: move; }
+
+/* Conversation View */

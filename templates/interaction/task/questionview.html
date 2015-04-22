@@ -1,0 +1,20 @@
+<script type="text/template" id="task-question-template">
+
+    <div id="cnv-questionContainer" >
+        <img class="header-img" src="assets/image/ui/title-bar-30.jpg"/>
+        <div id="cnv-questionTitle"><%= conversation.question != undefined ? conversation.question : '' %></div>
+        <% _.each(conversation.choices, function(choice, index){ %>
+        <div class="cnv-choice enabled" id="choice<%= index %>">
+            <img class="cnv-choice-hover" src="assets/image/ui/choice-button-highlight.png"/>
+            <p class="cnv-choice-body">
+                <%= choice.body %>
+            </p>
+        </div>
+        <div class="cnv-spacer"></div>
+
+        <% }); %>
+
+
+    </div>
+
+</script>
