@@ -17,22 +17,24 @@ I've included the following directories and content:
 **assets/**
 - *images used in this instance of the simulation*
 
+
 **data/**
 - *the JSON file for this instance of the simulation*		
+
 
 **js/**
 - _**Backbone** and **Marionette** model and view classes_
 
-scss/
 
-*SASS styles that get converted to CSS*
+**scss/**
+- *SASS styles that get converted to CSS*
+
 
 **css/**
-
 - *processed .scss styles*
 
-**templates/**
 
+**templates/**
 - _html templates that get rendered at runtime via **Underscore**'s templating system_
 
 
