@@ -45,5 +45,7 @@ Please feel free to contact me with any questions at **john@jhoffsis.com**
 Thanks!
 
 John
+john@jhoffsis.com
+415.310.5853
 
 
